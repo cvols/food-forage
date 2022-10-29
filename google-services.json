@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "227412534394",
+    "project_id": "food-forage-7b318",
+    "storage_bucket": "food-forage-7b318.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:227412534394:android:7f10591cdfc1c65dcc07c3",
+        "android_client_info": {
+          "package_name": "host.exp.exponent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "227412534394-peh39oadc47b8efer26odhlpvb53jn75.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "host.exp.exponent",
+            "certificate_hash": "ff91787b76eef09c9837badef66ae372cdb4aa2f"
+          }
+        },
+        {
+          "client_id": "227412534394-b5mdso5u3smtl4o7citvlrggbdfs6f33.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDx03YCX12Thj64KEKoTpcQCsDOOx5PPHY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "227412534394-b5mdso5u3smtl4o7citvlrggbdfs6f33.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "227412534394-50e38blj8ac6n7qr650h63rmsb5qjrkp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "host.exp.exponent"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

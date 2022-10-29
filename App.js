@@ -1,20 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useEffect } from 'react';
+import { Appearance, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { useFonts } from 'expo-font';
+
+import AppStack from './navigation/AppStack';
+import { useSettingsStore } from './stores/useSettingsStore';
 
 export default function App() {
+  const darkMode = useSettingsStore((state) => state.darkMode);
+  const setDarkMode = useSettingsStore((state) => state.setDarkMode);
+  const colorScheme = Appearance.getColorScheme();
+
+  const [loaded] = useFonts({
+    'OperatorMono-Medium': require('./assets/fonts/OperatorMono-Medium.otf'),
+  });
+
+  // if (!loaded) {
+  //   return <Text>loading</Text>
+  // }
+
+  useEffect(() => {
+    if (colorScheme === 'dark') {
+      setDarkMode(true);
+    } else {
+      setDarkMode(false);
+    }
+  }, []);
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <AppStack />
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
