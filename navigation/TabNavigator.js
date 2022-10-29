@@ -15,46 +15,48 @@ const TabNavigator = () => {
   return (
     <>
       <Tab.Navigator>
-        <Tab.Screen
-          name="Discover"
-          component={DiscoverScreen}
-          options={{
-            headerShown: false,
-            tabBarIcon: () => <Ionicons name="map" size={24} color="black" />,
-          }}
-        />
-        <Tab.Screen
-          name="Shop"
-          component={ShopScreen}
-          options={{
-            headerShown: false,
-            tabBarIcon: () => <Ionicons name="cart" size={24} color="black" />,
-          }}
-        />
-        <Tab.Screen
-          name="Forage"
-          component={ForageScreen}
-          options={{
-            headerShown: false,
-            tabBarIcon: () => <Ionicons name="home" size={24} color="black" />,
-          }}
-        />
-        <Tab.Screen
-          name="Eat"
-          component={EatScreen}
-          options={{
-            headerShown: false,
-            tabBarIcon: () => <Ionicons name="fast-food" size={24} color="black" />,
-          }}
-        />
-        <Tab.Screen
-          name="Settings"
-          component={SettingsScreen}
-          options={{
-            headerShown: false,
-            tabBarIcon: () => <Ionicons name="settings" size={24} color="black" />,
-          }}
-        />
+        <Tab.Group>
+          <Tab.Screen
+            name="Discover"
+            component={DiscoverScreen}
+            options={{
+              headerShown: false,
+              tabBarIcon: () => <Ionicons name="map" size={24} color="black" />,
+            }}
+          />
+          <Tab.Screen
+            name="Shop"
+            component={ShopScreen}
+            options={{
+              headerShown: false,
+              tabBarIcon: () => <Ionicons name="cart" size={24} color="black" />,
+            }}
+          />
+          <Tab.Screen
+            name="Forage"
+            component={ForageScreen}
+            options={{
+              headerShown: false,
+              tabBarIcon: () => <Ionicons name="home" size={24} color="black" />,
+            }}
+          />
+          <Tab.Screen
+            name="Eat"
+            component={EatScreen}
+            options={{
+              headerShown: false,
+              tabBarIcon: () => <Ionicons name="fast-food" size={24} color="black" />,
+            }}
+          />
+          <Tab.Screen
+            name="Settings"
+            component={SettingsScreen}
+            options={{
+              headerShown: false,
+              tabBarIcon: () => <Ionicons name="settings" size={24} color="black" />,
+            }}
+          />
+        </Tab.Group>
       </Tab.Navigator>
       <Modal animationType="slide" presentationStyle="pageSheet" visible={modalVisible} onRequestClose={() => setModalVisible(!modalVisible)}>
         {modal}
